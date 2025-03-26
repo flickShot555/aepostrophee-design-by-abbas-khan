@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Code, Database, Cloud, Globe, MobilePhone, Shield } from 'lucide-react';
+import { Code, Database, Cloud, Globe, Smartphone, Shield } from 'lucide-react';
 
 const services = [
   {
@@ -10,7 +10,7 @@ const services = [
     color: 'bg-orange/10 text-orange'
   },
   {
-    icon: <MobilePhone className="h-7 w-7" />,
+    icon: <Smartphone className="h-7 w-7" />,
     title: 'Mobile App Development',
     description: 'Cross-platform mobile applications that deliver seamless experiences across all devices.',
     color: 'bg-dark/10 text-dark'
