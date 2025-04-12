@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Code, BarChart2, Layers } from 'lucide-react';
 
 const Hero = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -78,26 +78,26 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-48 right-0 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="absolute top-1/2 right-0 md:right-10 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <div className="flex items-start">
                   <div className="bg-dark/10 p-3 rounded-lg mr-4">
-                    <Layers className="h-6 w-6 text-dark" />
+                    <BarChart2 className="h-6 w-6 text-dark" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-dark">UI/UX Design</h3>
-                    <p className="text-gray text-sm mt-1">Intuitive interfaces that enhance user experience</p>
+                    <h3 className="font-semibold text-dark">Data Analytics</h3>
+                    <p className="text-gray text-sm mt-1">Gain valuable insights from your business data</p>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute bottom-0 left-10 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="absolute bottom-10 left-1/4 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <div className="flex items-start">
                   <div className="bg-orange/20 p-3 rounded-lg mr-4">
-                    <BarChart2 className="h-6 w-6 text-orange" />
+                    <Layers className="h-6 w-6 text-orange" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-dark">Analytics</h3>
-                    <p className="text-gray text-sm mt-1">Data-driven insights to power your business decisions</p>
+                    <h3 className="font-semibold text-dark">Scalable Architecture</h3>
+                    <p className="text-gray text-sm mt-1">Future-proof solutions that grow with your business</p>
                   </div>
                 </div>
               </div>
