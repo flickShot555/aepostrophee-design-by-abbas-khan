@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Github, Linkedin, Instagram} from "lucide-react";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -12,6 +14,23 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const socialLinks = [
+    {
+      name: "Github",
+      icon: <Github size={20} />,
+      href: "https://github.com/flickShot555/",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/company/aepostrophee",
+    },
+    {
+      name: "Instagram",
+      icon: <Instagram size={20} />,
+      href: "https://instagram.com/aepostrophee",
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -35,46 +54,76 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    // Package form data with FormData for a POST request
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("subject", formData.subject);
+    formDataToSend.append("message", formData.message);
+  
+    try {
+      const response = await fetch("https://aepostrophee.com/api/sendMail.php", {
+        method: "POST",
+        body: formDataToSend,
+      });
+  
+      const result = await response.json();
+  
+      if (result.status === "success") {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        // Clear the form fields
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Error sending message!",
+          description: result.message || "Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
       toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        title: "Error",
+        description: "There was an error sending your message.",
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
+  
 
   const contactInfo = [
     {
       icon: <Phone className="h-5 w-5 text-orange" />,
       title: 'Phone',
-      details: '+1 (123) 456-7890',
-      action: 'tel:+11234567890',
+      details: '+92 324 1725257',
+      action: 'tel:+923241725257',
       actionText: 'Call us'
     },
     {
       icon: <Mail className="h-5 w-5 text-orange" />,
       title: 'Email',
-      details: 'info@techsolve.com',
-      action: 'mailto:info@techsolve.com',
+      details: 'info@aepostrophee.com',
+      action: 'mailto:info@aepostrophee.com',
       actionText: 'Send email'
     },
     {
       icon: <MapPin className="h-5 w-5 text-orange" />,
       title: 'Office',
-      details: '123 Tech Street, Innovation City, CA 94103',
+      details: 'Saddar, Rawalpindi',
       action: '#',
       actionText: 'Get directions'
     }
@@ -123,14 +172,16 @@ const Contact = () => {
               <div className="mt-10">
                 <h4 className="font-medium text-dark mb-4">Follow Us</h4>
                 <div className="flex space-x-3">
-                  {['Twitter', 'LinkedIn', 'Facebook', 'Instagram'].map((platform) => (
-                    <a 
-                      key={platform}
-                      href="#" 
+                  {socialLinks.map(({ name, icon, href }) => (
+                    <a
+                      key={name}
+                      href={href}
                       className="bg-gray-100 hover:bg-orange/10 text-dark w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-                      aria-label={platform}
+                      aria-label={name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <span className="text-sm">{platform.charAt(0)}</span>
+                      {icon}
                     </a>
                   ))}
                 </div>

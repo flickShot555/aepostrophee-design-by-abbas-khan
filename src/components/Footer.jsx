@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Linkedin, Instagram, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="mb-6">
               <a href="#" className="text-2xl font-bold">
-                Tech<span className="text-orange">Solve</span>
+                <span className="text-orange">Aepostrophee</span>
               </a>
             </div>
             <p className="text-gray-300 mb-6">
@@ -66,9 +67,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Get In Touch</h3>
             <ul className="space-y-4 text-gray-300">
-              <li>123 Tech Street, Innovation City, CA 94103</li>
-              <li>info@techsolve.com</li>
-              <li>+1 (123) 456-7890</li>
+              <li>Saddar, Rawalpindi, Pakistan</li>
+              <li>info@aepostrophee.com</li>
+              <li>+92 324 1725257</li>
             </ul>
             <button 
               onClick={scrollToTop}
@@ -82,13 +83,25 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} TechSolve. All rights reserved.
+            © {new Date().getFullYear()} Aepostrophee<sup>{'\u00AE'}</sup>. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex flex-wrap gap-6 text-sm text-gray-300">
-              <li><a href="#" className="hover:text-orange transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-orange transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-orange transition-colors">Cookies Policy</a></li>
+              <li>
+                <Link to="/privacy-policy" className="hover:text-orange transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-and-conditions" className="hover:text-orange transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookies-policy" className="hover:text-orange transition-colors">
+                  Cookies Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
