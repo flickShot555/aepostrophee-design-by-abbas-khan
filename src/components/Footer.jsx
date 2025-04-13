@@ -10,6 +10,31 @@ const Footer = () => {
       behavior: 'smooth'
     });
   };
+  const socialLinks = [
+    {
+      name: "Github",
+      icon: <Github size={20} />,
+      href: "https://github.com/flickShot555/",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/company/aepostrophee",
+    },
+    {
+      name: "Instagram",
+      icon: <Instagram size={20} />,
+      href: "https://instagram.com/aepostrophee",
+    },
+  ];
+  const links = [
+    { name: 'Home', href: '#home' },
+    { name: 'Services', href: '#services' },
+    //{ name: 'Plans', href: '#plans' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' },
+  ]
 
   return (
     <footer className="bg-dark text-white">
@@ -25,27 +50,34 @@ const Footer = () => {
               Transforming ideas into powerful digital experiences through innovative software solutions.
             </p>
             <div className="flex space-x-3">
-              {['Twitter', 'LinkedIn', 'Facebook', 'Instagram'].map((platform) => (
-                <a 
-                  key={platform}
-                  href="#" 
-                  className="bg-white/10 hover:bg-orange/80 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-                  aria-label={platform}
-                >
-                  <span className="text-sm">{platform.charAt(0)}</span>
-                </a>
-              ))}
+            {socialLinks.map(({ name, icon, href }) => (
+              <a
+                key={name}
+                href={href}
+                className="bg-gray-100 hover:text-orange text-light w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+                aria-label={name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {icon}
+              </a>
+            ))}
             </div>
           </div>
           
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-4">
-              {['About Us', 'Services', 'Portfolio', 'Careers', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-300 hover:text-orange transition-colors">
-                    {item}
-                  </a>
+              {/*{['About Us', 'Services', 'Portfolio', 'Plans', 'Contact'].map((item) => (*/}
+              {links.map((link, index) => (
+                <li key={link}>
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className="text-light hover:text-orange font-medium transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
                 </li>
               ))}
             </ul>
@@ -54,11 +86,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
-              {['Web Development', 'Mobile Apps', 'Custom Software', 'UI/UX Design', 'Cloud Solutions', 'Support & Maintenance'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-300 hover:text-orange transition-colors">
-                    {item}
-                  </a>
+              {['Web Development', 'Mobile Apps', 'Custom Software', 'UI/UX Design', 'Support & Maintenance'].map((item) => (
+                <li key={item} className="text-gray-300 hover:text-orange transition-colors">
+                {item}
                 </li>
               ))}
             </ul>

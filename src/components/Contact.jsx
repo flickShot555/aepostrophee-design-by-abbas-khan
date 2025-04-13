@@ -30,7 +30,7 @@ const Contact = () => {
       icon: <Instagram size={20} />,
       href: "https://instagram.com/aepostrophee",
     },
-  ];
+];
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
