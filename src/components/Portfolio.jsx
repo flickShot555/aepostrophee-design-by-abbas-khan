@@ -1,39 +1,57 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 
 const projects = [
+  //web
   {
     title: 'E-commerce Platform',
     category: 'Web Development',
     description: 'A full-featured e-commerce solution with advanced inventory management and analytics.',
-    image: 'https://via.placeholder.com/600x400/f8f9fa/333333?text=E-commerce+Platform',
-    tags: ['React', 'Node.js', 'MongoDB']
+    image: './assets/screenshots/web/e-commerce.PNG',
+    address: './assets/projects/e-commerce/index.html',
+    github: 'https://github.com/flickShot555/CODOTECH/tree/main/Fertilizer-Shop-Website',
+    tags: ['React']
   },
   {
-    title: 'Healthcare Management System',
-    category: 'Custom Software',
-    description: 'Comprehensive patient management system with scheduling and electronic health records.',
-    image: 'https://via.placeholder.com/600x400/f8f9fa/333333?text=Healthcare+System',
-    tags: ['Angular', '.NET', 'SQL Server']
+    title: 'Inventory Management System',
+    category: 'Web Development',
+    description: 'A complete Inventory management system for an autombile dealership',
+    image: './assets/screenshots/web/car-showroom-system.PNG',
+    address: '',
+    github: 'https://github.com/flickShot555/car-showroom-management-system',
+    tags: ['React']
   },
   {
-    title: 'Logistics Tracking App',
-    category: 'Mobile Development',
-    description: 'Real-time tracking and logistics management solution for fleet operators.',
-    image: 'https://via.placeholder.com/600x400/f8f9fa/333333?text=Logistics+App',
-    tags: ['React Native', 'Firebase', 'Google Maps API']
+    title: 'Social Media Website',
+    category: 'Web Development',
+    description: 'a website that provide a theme for developing a social media website, that allows users to connect and share content with each other.',
+    image: './assets/screenshots/web/CampusConnect.png',
+    address: './assets/projects/CampusConnect/index.html',
+    github:'https://github.com/flickShot555/CODOTECH/tree/main/College-Social-Media-Website',
+    tags: ['React']
   },
   {
-    title: 'Financial Analytics Dashboard',
-    category: 'Data Management',
-    description: 'Interactive dashboard for financial data analysis and reporting.',
-    image: 'https://via.placeholder.com/600x400/f8f9fa/333333?text=Analytics+Dashboard',
+    title: 'IT Solutions Company Website',
+    category: 'Web Development',
+    description: 'A complete modern and responsive website for an IT solutions company, showcasing services and projects.',
+    image: './assets/screenshots/web/IT-Services.PNG',
+    address: './assets/projects/IT-services/index.html',
+    github:'https://github.com/flickShot555/CODOTECH/tree/main/IT-Services-Company-Website',
     tags: ['Vue.js', 'Python', 'TensorFlow']
+  },
+  {
+    title: 'Online Compilor',
+    category: 'Web Development',
+    description: 'A web-based compiler that supports multiple programming languages, allowing users to write and execute code online.',
+    image: './assets/screenshots/web/online-compiler.PNG',
+    address: './assets/projects/online-compiler/index.html',
+    github:'https://github.com/flickShot555/CODOTECH/tree/main/Online-Compiler-Website',
+    tags: ['Javascript']
   }
 ];
 
-const categories = ['All', 'Web Development', 'Mobile Development', 'Custom Software', 'Data Management'];
+const categories = ['All', 'Web Development', 'Mobile Development', 'Custom Software'];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -108,10 +126,16 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8 space-x-[0.625rem]">
                   <button className="bg-white text-dark rounded-full p-3 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
-                    <ArrowUpRight className="h-5 w-5" />
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="h-5 w-5" /></a>
                   </button>
+                  <button className="bg-white text-dark rounded-full p-3 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                    <a href={project.address} target="_blank" rel="noopener noreferrer">
+                    <ArrowUpRight className="h-5 w-5" /></a>
+                  </button>
+                  
                 </div>
               </div>
               <div className="p-6">

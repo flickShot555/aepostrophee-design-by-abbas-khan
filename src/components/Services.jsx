@@ -1,12 +1,12 @@
 
 import React, { useEffect } from 'react';
-import { Code, Database, Cloud, Globe, Smartphone, Shield } from 'lucide-react';
+import { Code, Database, Megaphone, Globe, Smartphone, BadgeCheck, DraftingCompass } from 'lucide-react';
 
 const services = [
   {
-    icon: <Code className="h-7 w-7" />,
-    title: 'Custom Software Development',
-    description: 'Tailored software solutions designed to address your specific business challenges and objectives.',
+    icon: <Globe className="h-7 w-7" />,
+    title: 'Web Development',
+    description: 'Responsive, high-performance web applications built with modern technologies and frameworks.',
     color: 'bg-orange/10 text-orange'
   },
   {
@@ -16,27 +16,27 @@ const services = [
     color: 'bg-dark/10 text-dark'
   },
   {
-    icon: <Globe className="h-7 w-7" />,
-    title: 'Web Development',
-    description: 'Responsive, high-performance web applications built with modern technologies and frameworks.',
+    icon: <Code className="h-7 w-7" />,
+    title: 'Custom Software Development',
+    description: 'Tailored software solutions designed to address your specific business challenges and objectives.',
     color: 'bg-orange/10 text-orange'
   },
   {
-    icon: <Cloud className="h-7 w-7" />,
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure and migration services to optimize your operations.',
+    icon: <DraftingCompass className="h-7 w-7" />,
+    title: 'WireFraming',
+    description: 'Transform ideas into interactive prototypes and wireframes, bringing clarity and functionality to your concepts',
     color: 'bg-dark/10 text-dark'
   },
   {
-    icon: <Database className="h-7 w-7" />,
-    title: 'Data Management',
-    description: 'Comprehensive data solutions including analytics, warehousing, and business intelligence.',
+    icon: <BadgeCheck className="h-7 w-7" />,
+    title: 'Digital Branding',
+    description: 'Crafting a unique digital identity that resonates with your target audience and enhances brand recognition.',
     color: 'bg-orange/10 text-orange'
   },
   {
-    icon: <Shield className="h-7 w-7" />,
-    title: 'Security Services',
-    description: 'Advanced cybersecurity measures to protect your applications and sensitive data.',
+    icon: <Megaphone className="h-7 w-7" />,
+    title: 'Social Media Marketing',
+    description: 'get your brand noticed with our targeted social media marketing strategies that drive engagement and growth.',
     color: 'bg-dark/10 text-dark'
   }
 ];

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Code, BarChart2, Layers } from 'lucide-react';
+import { ArrowRight, Code, BarChart2, Layers, BadgeCheck } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -39,7 +39,7 @@ const Hero = () => {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 leading-tight reveal stagger-1">
-              We Build <span className="text-gradient">Software</span> That Drives Business Forward
+              We Build <span className="text-gradient">Softwares</span> That Drive Businesses Forward
             </h1>
             <p className="text-gray text-lg mt-6 max-w-lg reveal stagger-2">
               Delivering cutting-edge software solutions that transform ideas into powerful digital experiences. Partner with us to unlock your business potential.
@@ -78,14 +78,14 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-1/2 right-0 md:right-10 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="absolute top-1/3 right-10 md:right-10 w-72 h-auto glass-effect card-shadow rounded-lg p-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <div className="flex items-start">
                   <div className="bg-dark/10 p-3 rounded-lg mr-4">
-                    <BarChart2 className="h-6 w-6 text-dark" />
+                    <BadgeCheck className="h-6 w-6 text-dark" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-dark">Data Analytics</h3>
-                    <p className="text-gray text-sm mt-1">Gain valuable insights from your business data</p>
+                    <h3 className="font-semibold text-dark">Digital Branding</h3>
+                    <p className="text-gray text-sm mt-1">Make your brand a need of the people, not just a mere business</p>
                   </div>
                 </div>
               </div>

@@ -1,9 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @layer base {
   :root {
@@ -48,7 +48,7 @@
   }
 
   * {
-    @apply border-border;
+    border: 1px solid var(--border);
   }
 
   html {
@@ -56,11 +56,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    font-weight: bold;
+    letter-spacing: tight;
   }
 
   .section-padding {
@@ -120,7 +125,9 @@
   }
   
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .card-shadow {

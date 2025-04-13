@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto container-padding flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-dark">Tech<span className="text-orange">Solve</span></span>
+          <span className="text-2xl font-bold text-orange">Aepostrophee<sup>{'\u00AE'}</sup></span>
         </a>
         
         {/* Desktop Navigation */}

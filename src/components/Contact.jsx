@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -31,12 +30,12 @@ const Contact = () => {
     };
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -223,7 +222,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={5}
+                    rows="5"
                     className="w-full px-4 py-2.5 rounded-md border border-gray-300 focus:border-orange focus:ring-1 focus:ring-orange outline-none transition-colors"
                     placeholder="How can we help you?"
                     required

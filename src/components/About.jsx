@@ -21,9 +21,9 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: <Users className="h-6 w-6 text-orange" />, value: '200+', label: 'Clients Worldwide' },
-    { icon: <Trophy className="h-6 w-6 text-orange" />, value: '500+', label: 'Projects Completed' },
-    { icon: <Calendar className="h-6 w-6 text-orange" />, value: '10+', label: 'Years Experience' }
+    { icon: <Users className="h-6 w-6 text-orange" />, value: '3+', label: 'Clients Countrywide' },
+    { icon: <Trophy className="h-6 w-6 text-orange" />, value: '50+', label: 'Projects Completed' },
+    { icon: <Calendar className="h-6 w-6 text-orange" />, value: '2+', label: 'Years Experience' }
   ];
 
   const values = [
