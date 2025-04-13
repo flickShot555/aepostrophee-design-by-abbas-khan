@@ -45,10 +45,14 @@ const About = () => {
               We're a Team of <span className="text-gradient">Tech Experts</span>
             </h2>
             <p className="text-gray mt-6 reveal stagger-2">
-              Founded in 2013, TechSolve has grown into a leading software development company with a passion for creating innovative solutions that drive business success.
+              Founded in 2025, Aepostrophee has grown into a much experienced software development company with a passion for 
+              creating innovative solutions that drive business success.
             </p>
             <p className="text-gray mt-4 reveal stagger-2">
-              Our team combines deep technical expertise with industry knowledge to deliver custom software that meets your specific business requirements. We partner with organizations of all sizes, from startups to enterprises, across various industries.
+              Our team combines deep technical expertise with industry knowledge to deliver custom software that 
+              meets your specific business requirements. We partner with organizations of all sizes, from startups 
+              to enterprises, across various industries. We aim to provide services ranging from Web Development, 
+              Mobile App Development, to Desktop Apps such as Point-of-Sales tailored to your needs!
             </p>
             
             <div className="mt-8 space-y-4 reveal stagger-3">
@@ -87,11 +91,11 @@ const About = () => {
               </div>
               
               <div className="mt-12 relative overflow-hidden rounded-lg reveal stagger-3">
-                <img 
+                {/*<img 
                   src="https://via.placeholder.com/800x500/f8f9fa/333333?text=Our+Team" 
                   alt="Our Team" 
                   className="w-full h-auto rounded-lg"
-                />
+                />*/}
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent flex items-end">
                   <div className="p-8 w-full">
                     <h3 className="text-white text-2xl font-bold">Passionate Professionals</h3>
