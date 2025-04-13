@@ -1,6 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, Github } from 'lucide-react';
+import CampusConnect from '../../assets/screenshots/web/CampusConnect.png';
+import CarShowroomSystem from '../../assets/screenshots/web/car-showroom-system.png'
+import ecomm from '../../assets/screenshots/web/e-commerce.png'
+import itserv from '../../assets/screenshots/web/IT-services.png'
+import comp from '../../assets/screenshots/web/online-compiler.png'
 
 const projects = [
   //web
@@ -8,7 +13,7 @@ const projects = [
     title: 'E-commerce Platform',
     category: 'Web Development',
     description: 'A full-featured e-commerce solution with advanced inventory management and analytics.',
-    image: './assets/screenshots/web/e-commerce.PNG',
+    image: ecomm,
     address: './assets/projects/e-commerce/index.html',
     github: 'https://github.com/flickShot555/CODOTECH/tree/main/Fertilizer-Shop-Website',
     tags: ['React']
@@ -17,7 +22,7 @@ const projects = [
     title: 'Inventory Management System',
     category: 'Web Development',
     description: 'A complete Inventory management system for an autombile dealership',
-    image: './assets/screenshots/web/car-showroom-system.PNG',
+    image: CarShowroomSystem,
     address: '',
     github: 'https://github.com/flickShot555/car-showroom-management-system',
     tags: ['React']
@@ -26,7 +31,7 @@ const projects = [
     title: 'Social Media Website',
     category: 'Web Development',
     description: 'a website that provide a theme for developing a social media website, that allows users to connect and share content with each other.',
-    image: './assets/screenshots/web/CampusConnect.png',
+    image: CampusConnect,
     address: './assets/projects/CampusConnect/index.html',
     github:'https://github.com/flickShot555/CODOTECH/tree/main/College-Social-Media-Website',
     tags: ['React']
@@ -35,7 +40,7 @@ const projects = [
     title: 'IT Solutions Company Website',
     category: 'Web Development',
     description: 'A complete modern and responsive website for an IT solutions company, showcasing services and projects.',
-    image: './assets/screenshots/web/IT-Services.PNG',
+    image: itserv,
     address: './assets/projects/IT-services/index.html',
     github:'https://github.com/flickShot555/CODOTECH/tree/main/IT-Services-Company-Website',
     tags: ['Vue.js', 'Python', 'TensorFlow']
@@ -44,7 +49,7 @@ const projects = [
     title: 'Online Compilor',
     category: 'Web Development',
     description: 'A web-based compiler that supports multiple programming languages, allowing users to write and execute code online.',
-    image: './assets/screenshots/web/online-compiler.PNG',
+    image: comp,
     address: './assets/projects/online-compiler/index.html',
     github:'https://github.com/flickShot555/CODOTECH/tree/main/Online-Compiler-Website',
     tags: ['Javascript']
